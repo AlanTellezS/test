@@ -87,10 +87,6 @@
                 ]
             });
         
-            $('input.column_filter').on( 'keyup click', function () {
-                filterColumn( $(this).parents('tr').attr('data-column') );
-            } );
-
             $('select.column_filter').on( 'change', function () {
                 filterColumn( $(this).parents('tr').attr('data-column') );
             } );
