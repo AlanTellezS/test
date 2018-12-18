@@ -65,17 +65,17 @@
     <script type="text/javascript" class="init">
         $(document).ready(function () {
             $('#bake01').DataTable({
-                ajax: "sourcedata/ema/bake01_ema.json",
-                columns: [
+                "ajax" : "sourcedata/ema/bake01_ema.json",
+                "columns": [
                     { 
-                        data: 3,
+                        "data": 3,
                         render: function(data, type, row) {
                             return '<img src="'+ data[3] +'" class="bgpicture"/>'
                         }
                     },
-                    { data: 2 },
-                    { data: 0 },
-                    { data: 1 }
+                    { "data": 2 },
+                    { "data": 0 },
+                    { "data": 1 }
                 ]
             });
         });
