@@ -84,31 +84,6 @@
             $('#bake01').DataTable({
                 "ajax" : "sourcedata/ema/bake01_ema.json",
                 pageLength: 25,
-                responsive: {
-                    details: {
-                        display: $.fn.dataTable.Responsive.display.modal({
-                            header: function (row) {
-                                var data = row.data();
-                                return data[3];
-                            }
-                        }),
-                        renderer: function (api, rowIdx, columns) {
-                            var data = $.map(columns, function (col, i) {
-                                if (col.columnIndex == 5) {
-                                    return col.hidden ?
-                                        '<tr style="font-size: 16px;" data-dt-row="' + col.rowIndex + '" data-dt-column="' + col.columnIndex + '">' +
-                                        '<td>' + col.data + '</td>' +
-                                        '</tr>' :
-                                        '';
-                                }
-                            }).join('');
-
-                            return data ?
-                                $('<table style="margin: auto;"/>').append(data) :
-                                false;
-                        }
-                    }
-                },
                 "columns": [
                     { 
                         "data": null,
@@ -130,34 +105,6 @@
             } );
         });
     </script>
-
-    <style type="text/css">
-        .bgpicture {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 77px;
-            width: 125px;
-            margin: auto;
-        }
-
-        .bgframe {
-            height: 83px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            margin: auto;
-            width: 125px;
-            left: 0;
-            right: 0;
-            top: 0;
-            bottom: 5px;
-        }
-
-        td {
-            position: relative;
-        }
-    </style>
 </head>
 
 <body>
