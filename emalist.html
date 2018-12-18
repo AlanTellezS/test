@@ -64,18 +64,21 @@
     <!-- Data Display Script-->
     <script type="text/javascript" class="init">
         function filterGlobal () {
-            $('#example').DataTable().search(
+            $('#bake01').DataTable().search(
                 $('#global_filter').val(),
                 $('#global_regex').prop('checked'),
+                $('#global_smart').prop('checked')
             ).draw();
         }
         
         function filterColumn ( i ) {
-            $('#example').DataTable().column( i ).search(
+            $('#bake01').DataTable().column( i ).search(
                 $('#col'+i+'_filter').val(),
+                $('#col'+i+'_regex').prop('checked'),
                 $('#col'+i+'_smart').prop('checked')
             ).draw();
         }
+ 
         
         $(document).ready(function () {
             $('#bake01').DataTable({
