@@ -90,6 +90,10 @@
             $('input.column_filter').on( 'keyup click', function () {
                 filterColumn( $(this).parents('tr').attr('data-column') );
             } );
+
+            $('select.column_filter').on( 'change', function () {
+                filterColumn( $(this).parents('tr').attr('data-column') );
+            } );
         });
     </script>
 </head>
@@ -117,7 +121,14 @@
                                 <tbody>
                                     <tr id="filter_col2" data-column="1">
                                         <td>Search by stars</td>
-                                        <td><input type="text" class="column_filter" id="col1_filter"></td>
+                                        <td>
+                                            <select class="column_filter" id="col1_filter">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                            </select>
+                                            <!-- <input type="text" class="column_filter" id="col1_filter"> -->
+                                        </td>
                                     </tr>
                                     <tr id="filter_col4" data-column="3">
                                         <td>Search by ability</td>
