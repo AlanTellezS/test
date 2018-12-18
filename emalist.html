@@ -65,13 +65,15 @@
     <script type="text/javascript" class="init">
         function filterGlobal () {
             $('#example').DataTable().search(
-                $('#global_filter').val()
+                $('#global_filter').val(),
+                $('#global_regex').prop('checked'),
             ).draw();
         }
         
         function filterColumn ( i ) {
             $('#example').DataTable().column( i ).search(
-                $('#col'+i+'_filter').val()
+                $('#col'+i+'_filter').val(),
+                $('#col'+i+'_smart').prop('checked')
             ).draw();
         }
         
