@@ -88,6 +88,7 @@
             });
         
             $('select.column_filter').on( 'change', function () {
+                console.log("lmao");
                 filterColumn( $(this).parents('tr').attr('data-column') );
             } );
         });
