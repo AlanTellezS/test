@@ -64,7 +64,7 @@
     <!-- Data Display Script-->
     <script type="text/javascript" class="init">
         function filterGlobal () {
-            $('#bake01').DataTable().search(
+                $('#bake01').DataTable().search(
                 $('#global_filter').val(),
                 $('#global_regex').prop('checked'),
                 $('#global_smart').prop('checked')
@@ -185,6 +185,7 @@
                                         <td>Search by stars</td>
                                         <td><input type="text" class="column_filter" id="col2_filter"></td>
                                         <td><input type="checkbox" class="column_filter" id="col2_smart" checked="checked"></td>
+                                        <td><input type="checkbox" class="column_filter" id="col1_smart" checked="checked"></td>
                                     </tr>
                                 </tbody>
                             </table>
