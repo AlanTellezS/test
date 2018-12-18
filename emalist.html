@@ -75,18 +75,6 @@
             ).draw();
         }
         
-        $(document).ready(function() {
-            $('#example').DataTable();
-        
-            $('input.global_filter').on( 'keyup click', function () {
-                filterGlobal();
-            } );
-        
-            $('input.column_filter').on( 'keyup click', function () {
-                filterColumn( $(this).parents('tr').attr('data-column') );
-            } );
-        } );
-        
         $(document).ready(function () {
             $('#bake01').DataTable({
                 "ajax" : "sourcedata/ema/bake01_ema.json",
@@ -128,6 +116,13 @@
                     { "data": 1 }
                 ]
             });
+            $('input.global_filter').on( 'keyup click', function () {
+                filterGlobal();
+            } );
+        
+            $('input.column_filter').on( 'keyup click', function () {
+                filterColumn( $(this).parents('tr').attr('data-column') );
+            } );
         });
     </script>
 
